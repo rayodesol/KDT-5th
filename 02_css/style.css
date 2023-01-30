@@ -1,0 +1,12 @@
+@import url("./heading-style.css");
+
+/* 주석 쓰는 방법 동일 */
+p {
+  color: yellow;
+  background-color: red;
+}
+
+span {
+  color: tomato;
+  background-color: bisque;
+}

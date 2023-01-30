@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>[실습] 카페 음료 주문</title>
+  </head>
+
+  <body>
+    <h1>Tetz 카페</h1>
+
+    <div id="name" class="new-order">
+      <span>주문자 이름을 입력 하세요</span>
+      <input type="text" />
+      <hr />
+    </div>
+
+    <div id="team-name" class="new-order">
+      <h2>단체 주문</h2>
+      <input type="checkbox" name="team" value="coffee" /> 커피
+      <input type="checkbox" name="team" value="tea" /> 차
+      <input type="checkbox" name="team" value="latte" /> 라떼
+      <p>주문 날짜 입력</p>
+      <input type="date" name="datetime" />
+      <hr />
+    </div>
+
+    <div id="personal-name" class="new-order">
+      <h2>개별 주문</h2>
+      <input type="radio" name="personal" value="coffee" /> 커피
+      <input type="radio" name="personal" value="tea" /> 차
+      <input type="radio" name="personal" value="latte" /> 라떼
+      <p>주문 날짜 및 시간 입력</p>
+      <input type="datetime-local" name="local-time" />
+      <hr />
+    </div>
+  </body>
+</html>

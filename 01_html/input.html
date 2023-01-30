@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>사용자 입력 받기</title>
+  </head>
+
+  <body>
+    <select name="menu">
+      <optgroup label="coffee">
+        <option value="americano">아메리카노</option>
+        <option value="latte">라떼</option>
+        <option value="cappuccino" disabled>카푸치노</option>
+      </optgroup>
+
+      <optgroup label="other">
+        <option value="lemonade">레모네이드</option>
+        <option value="hotchoco">핫초코</option>
+        <option value="smoothie" selected>스무디</option>
+      </optgroup>
+    </select>
+
+    <input type="button" value="클릭해 주세요" />
+    <button>Click</button>
+    <br />
+
+    <input type="radio" name="flash" value="t" /> T 점멸
+    <br />
+
+    <input type="text" placeholder="텍스트 입력" />
+    <input type="text" value="고정값" />
+    <br />
+
+    <input type="password" />
+    <br />
+
+    <input type="checkbox" name="menu" value="coffee" /> 커피
+    <input type="checkbox" name="menu" value="tea" /> 차
+    <input type="checkbox" name="menu" value="smoothie" checked /> 스무디
+    <br />
+
+    <input type="radio" name="flash" value="f" /> F 점멸
+    <input type="radio" name="flash" value="d" checked /> D 점멸
+    <br />
+
+    <input type="date" name="datetime" />
+    <br />
+    <input type="datetime-local" name="local-time" />
+    <br />
+
+    <input type="color" />
+  </body>
+</html>

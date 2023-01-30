@@ -1,0 +1,29 @@
+.list {
+  background-color: skyblue;
+}
+
+#item {
+  background-color: red;
+}
+/* id 10점 */
+/* !important; 99999...점 */
+
+li {
+  background-color: red;
+}
+/* 태그 선택자 1점 */
+
+* {
+  background-color: dodgerblue;
+}
+/* 전체 선택자 0점 */
+
+/* .list li.item {
+  background-color: orange;
+}
+21점
+
+body .list li.item {
+  background-color: skyblue;
+}
+22점 */

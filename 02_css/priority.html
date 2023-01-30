@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>선택자 우선순위</title>
+    <link rel="stylesheet" href="./priority.css" />
+  </head>
+  <body>
+    <ul>
+      <!-- <li id="item" class="list" style="background-color: orange">1</li>
+      style="background-color: orange 인라인 100점 -->
+
+      <li id="item" class="list">1</li>
+      <!-- id 100점 > class 10점 -->
+
+      <li class="list">2</li>
+      <li>3</li>
+    </ul>
+    <div>4</div>
+
+    <!-- 21점 vs 22점 -->
+    <!-- <ul class="list">
+      <li class="item">1</li>
+      <li>2</li>
+      <li>3</li>
+    </ul>
+    <div>4</div> -->
+  </body>
+</html>

@@ -1,0 +1,36 @@
+p.lion {
+  background-color: red;
+}
+
+ul > .lion {
+  background-color: green;
+}
+
+#tiger {
+  background-color: yellow;
+}
+
+.lion {
+  color: white;
+}
+
+.zoo .lion {
+  font-weight: bold;
+}
+
+#tiger + li {
+  background-color: skyblue;
+}
+
+/* 내 답
+ul .lion ~ li {
+  background-color: orange;
+}
+
+강사님 답
+.zoo > ul > .lion ~ li {
+  background-color: orange;
+} */
+div.zoo > ul > .lion ~ li {
+  background-color: orange;
+}
