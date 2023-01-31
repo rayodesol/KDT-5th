@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>요소 숨기는 3가지 방법</title>
+    <style>
+      div {
+        width: 200px;
+        height: 200px;
+        cursor: pointer;
+        display: inline-block;
+      }
+      .opacity {
+        background-color: aqua;
+        opacity: 1;
+        /* opacity: 0; */
+      }
+      .visibility {
+        background-color: greenyellow;
+        visibility: visible;
+        /* visibility: hidden; */
+      }
+      .display {
+        background-color: dodgerblue;
+        /* display: inline-block; */
+        display: none;
+      }
+      .last {
+        background-color: violet;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="opacity">opacity</div>
+    <div class="visibility">visibility</div>
+    <div class="display">display</div>
+    <div class="last">last</div>
+  </body>
+</html>

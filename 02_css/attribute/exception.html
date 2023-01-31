@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>인라인, 블록 예외사항</title>
+    <style>
+      html {
+        font-size: 20px;
+        font-weight: bold;
+      }
+      span {
+        color: white;
+        background-color: blue;
+        /* padding: 10px; */
+      }
+      div {
+        color: white;
+        background-color: red;
+      }
+      .margin-bottom {
+        margin-bottom: 50px;
+      }
+      .margin-top {
+        margin-top: 20px;
+      }
+    </style>
+  </head>
+
+  <body>
+    <span>span 요소</span>
+    <div>div 요소</div>
+    <span>span 요소</span>
+    <span>span 요소</span>
+    <div>div 요소</div>
+    <div>div 요소</div>
+    <span>span 요소</span>
+    <span>span 요소</span>
+    <span>span 요소</span>
+    <div>div 요소</div>
+    <div class="margin-bottom">div 요소</div>
+    <div class="margin-top">div 요소</div>
+    <br />
+    HTML 컨텐츠 사이에 들어있는 <span>span 요소</span> 입니다!<br /><br />
+    <div>div 요소 안에 들어있는 <span>span 요소</span> 입니다!</div>
+    <br />
+    <span
+      >span 요소 안에 들어있는
+      <div>div 요소</div>
+      입니다!</span
+    >
+  </body>
+</html>

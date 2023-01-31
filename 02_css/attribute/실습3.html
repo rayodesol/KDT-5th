@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>[실습] 테두리 그리기</title>
+    <style>
+      div {
+        width: 100px;
+        height: 100px;
+        margin-bottom: 10px;
+        border: 4px solid black;
+      }
+      .box1 {
+        /* border-width: 10px; */
+        border-width: 4px 8px 12px 16px;
+      }
+      .box2 {
+        /* border-style: dashed; */
+        border-style: solid dashed dotted double;
+      }
+      .box3 {
+        /* border-color: red; */
+        border-color: orange skyblue red grey;
+      }
+      .box4 {
+        border-top: 4px solid violet;
+        border-right: 8px dashed red;
+        border-bottom: 12px dotted blue;
+        border-left: 16px double greenyellow;
+        /* border-top: 2px solid violet;
+        border-right: 5px dashed red;
+        border-bottom: 10px dotted blue;
+        border-left: 15px solid greenyellow; */
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="box1">1</div>
+    <div class="box2">2</div>
+    <div class="box3">3</div>
+    <div class="box4">4</div>
+  </body>
+</html>

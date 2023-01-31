@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Overflow</title>
+    <style>
+      .parent {
+        width: 200px;
+        height: 200px;
+        background-color: skyblue;
+        /* overflow: hidden; */
+        /* overflow: scroll; */
+        /* overflow: auto; */
+
+        overflow-x: auto;
+        overflow-y: hidden;
+      }
+      .child {
+        margin: 10px;
+        width: 400px;
+        /* width: 100px; */
+        height: 400px;
+        background-color: orange;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="parent">
+      parent
+      <div class="child">child</div>
+    </div>
+  </body>
+</html>
