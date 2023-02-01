@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>[실습] flex로 헤더 만들기!</title>
+    <style>
+      ul {
+        display: flex;
+        list-style: none;
+        padding-left: 0px;
+        background-color: #999;
+        border-radius: 10px;
+
+        /* height: 60px; */
+        padding: 20px;
+      }
+      li {
+        /* flex-grow; 남은 공간을 알아서 차지 */
+        flex-grow: 1;
+
+        /* 한없이 줄어드는 것을 막음 */
+        flex-shrink: 0;
+
+        text-align: center;
+        flex-basis: 100px;
+        font-weight: 700;
+        color: #eee;
+        cursor: pointer;
+      }
+    </style>
+  </head>
+
+  <body>
+    <ul>
+      <li>메뉴1</li>
+      <li>메뉴2</li>
+      <li>메뉴3</li>
+      <li>메뉴4</li>
+    </ul>
+  </body>
+</html>

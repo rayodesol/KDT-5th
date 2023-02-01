@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>요소 쌓임 순서</title>
+    <style>
+      .parent {
+        position: relative;
+        width: 400px;
+        height: 300px;
+        background-color: dodgerblue;
+      }
+      .child1 {
+        position: relative;
+        width: 150px;
+        height: 100px;
+        background-color: yellow;
+        z-index: 999;
+      }
+      .child2 {
+        position: absolute;
+        top: 30px;
+        left: 30px;
+        width: 250px;
+        height: 150px;
+        background-color: orange;
+        z-index: 1;
+      }
+      .child3 {
+        position: absolute;
+        bottom: 20px;
+        /* right: -10px; */
+        width: 150px;
+        height: 200px;
+        background-color: tomato;
+        z-index: 999;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="parent">
+      <div class="child1">1</div>
+      <div class="child2">2</div>
+      <div class="child3">3</div>
+    </div>
+  </body>
+</html>

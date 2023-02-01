@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>[실습] 애벌레 만들기</title>
+    <style>
+      .larva {
+        position: absolute;
+        width: 100px;
+        height: 100px;
+        border-radius: 50px;
+        z-index: 1;
+      }
+      .larva#b1 {
+        background-color: cornflowerblue;
+        top: 100px;
+        left: 100px;
+      }
+      .larva#b2 {
+        background-color: rgb(36, 128, 219);
+        top: 130px;
+        left: 180px;
+      }
+      .larva#b3 {
+        background-color: darkblue;
+        top: 170px;
+        left: 220px;
+      }
+      .larva#b4 {
+        background-color: lightskyblue;
+        top: 168px;
+        left: 280px;
+      }
+      .larva#b5 {
+        background-color: rgb(61, 127, 129);
+        top: 165px;
+        left: 330px;
+      }
+      .eye#e1 {
+        position: absolute;
+        top: 15px;
+        left: 18px;
+        background-color: white;
+        width: 36px;
+        height: 36px;
+        border-radius: 50%;
+      }
+      .eye#e2 {
+        position: absolute;
+        top: 17px;
+        left: 20px;
+        background-color: black;
+        width: 20px;
+        height: 20px;
+        border-radius: 50%;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="larva" id="b1">
+      <div class="eye" id="e1"></div>
+      <div class="eye" id="e2"></div>
+    </div>
+    <div class="larva" id="b2"></div>
+    <div class="larva" id="b3"></div>
+    <div class="larva" id="b4"></div>
+    <div class="larva" id="b5"></div>
+  </body>
+</html>
