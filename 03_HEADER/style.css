@@ -1,0 +1,143 @@
+/* COMMON */
+body {
+}
+a {
+  /* a태그 밑줄 없애기 */
+  text-decoration: none;
+  color: #4a4a4a;
+}
+
+/* BLOCK */
+header {
+  display: flex;
+  justify-content: center;
+  /* background-color: skyblue; */
+  /* 그림자 효과 - 박스쉐도우 */
+  box-shadow: 0 2px 4px 0 rgba(207, 207, 207, 0.5);
+}
+header .inner {
+  display: flex;
+  width: 1200px;
+  height: 64px;
+  padding: 0 32px;
+  justify-content: space-between;
+  align-items: center;
+  /* background-color: orange; */
+}
+
+/* 로고 파트 */
+header .inner .header__logo {
+  font-size: 32px;
+  /* 화면 줄어들 때 줄어들지 않게 */
+  flex-shrink: 0;
+}
+header .inner .header__logo a {
+  font-family: "Indie Flower", cursive;
+  color: green;
+}
+header .inner .header__logo a i {
+}
+
+/* 메뉴 파트 */
+header .inner .header__menu {
+  display: flex;
+  font-size: 16px;
+  height: 32px;
+  flex-shrink: 0;
+  margin-left: 20px;
+}
+header .inner .header__menu li {
+  /* 필요 없음
+  display: flex; */
+
+  /* padding: 0 10px; */
+  /* 중앙정렬까지 되는 padding 값 - 높이가 32, 글자크기 16 이니 -> 패딩 8로 */
+  padding: 8px 16px;
+
+  /* 중앙정렬하는 다른 방법 */
+  /* line-height: 32px; */
+
+  /* 필요 없음
+  align-items: center; */
+}
+/* header .inner .header__menu li a {
+} */
+header .inner .header__menu li a:hover {
+  color: #1dc078;
+}
+
+/* 공간 파트 */
+header .inner .header__space {
+  /* 남은 부분은 이 부분이 차지하도록. 줄어들 때도 이 부분이 줄어드는. */
+  flex-grow: 1;
+}
+
+/* 검색 파트 */
+header .inner .header__search {
+  /* 검색 아이콘 위치를 위해 부모 요소에 relative */
+  position: relative;
+  height: 34px;
+  flex-shrink: 0;
+  margin-right: 30px;
+}
+header .inner .header__search input {
+  box-sizing: border-box;
+  width: 148px;
+  height: 34px;
+  padding: 5px 9px;
+  font-size: 16px;
+  background-color: #f6f6f6;
+  border-radius: 3px;
+  border: none;
+  color: #4a4a4a;
+}
+header .inner .header__search input:hover {
+  border: 1px solid #c8c8c8;
+}
+header .inner .header__search input:focus {
+  border: 1px solid #c8c8c8;
+  outline-color: #1dc078;
+  /* outline: 3px solid green; */
+
+  /* 테두리 선 없이 그림자 처리 */
+  /* outline: none;
+  box-shadow: inset 0px 0px 0 2px #1dc078; */
+}
+header .inner .header__search i {
+  /* 검색 아이콘 검색창 안에 들어가 보이게 설정 */
+  position: absolute;
+  right: 9px;
+
+  /* 수직중앙정렬하는 방법; marin: auto; top: 0; bottom: 0; height: ;*/
+  margin: auto;
+  height: 16px;
+  top: 0;
+  bottom: 0;
+
+  /* 눈에 보이는 것만 이동하는 것 */
+  /* transform: translateX(-30px); */
+}
+
+/* 로그인, 회원가입 */
+header .inner .header__login-join {
+  display: flex;
+  height: 34px;
+  gap: 10px;
+  flex-shrink: 0;
+}
+header .inner .header__login-join .btn {
+  height: 34px;
+  border: 1px solid #dbdbdb;
+  box-sizing: border-box;
+  padding: 9px;
+  border-radius: 3px;
+  cursor: pointer;
+}
+header .inner .header__login-join .btn.btn--login {
+  color: #4a4a4a;
+  background-color: white;
+}
+header .inner .header__login-join .btn.btn--join {
+  color: white;
+  background-color: #f77867;
+}
