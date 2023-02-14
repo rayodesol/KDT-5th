@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>querySelectorAll</title>
+  </head>
+  <body>
+    <div class="box">1</div>
+    <div class="box">2</div>
+    <div class="box">3</div>
+    <div class="box">4</div>
+    <div class="box">5</div>
+    <div class="box">6</div>
+    <div class="box">7</div>
+    <div class="box">8</div>
+    <div class="box">9</div>
+    <div class="box">10</div>
+  </body>
+
+  <script>
+    const boxEls = document.querySelectorAll(".box");
+    console.log(boxEls);
+
+    boxEls.forEach(function (boxEl, index) {
+      // console.log("boxEl", boxEl);
+      // console.log("index", index);
+
+      // 각각의 div 요소 변경 가능
+      boxEl.classList.add(`box_${index + 1}`);
+    });
+
+    // // 위 forEach 와 같은 기능
+    // for (let i = 0; i < boxEls.length; i++) {
+    //   boxEls[i].classList.add(`box_${i + 1}`);
+    // }
+  </script>
+</html>

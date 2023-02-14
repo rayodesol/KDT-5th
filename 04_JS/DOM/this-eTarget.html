@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>this, eTarget</title>
+  </head>
+
+  <body>
+    <!-- <ul>
+      <li onclick="showThis(this)">1</li>
+      <li onclick="showThis(this)">2</li>
+      <li onclick="showThis(this)">3</li>
+      <li onclick="showThis(this)">4</li>
+    </ul> -->
+
+    <ul>
+      <li onclick="deleteThis(this)">1</li>
+      <li onclick="deleteThis(this)">2</li>
+      <li onclick="deleteThis(this)">3</li>
+      <li onclick="deleteThis(this)">4</li>
+    </ul>
+
+    <ul>
+      <li class="list">1</li>
+      <li>2</li>
+      <li>3</li>
+      <li>4</li>
+    </ul>
+  </body>
+
+  <script>
+    // function showThis(t) {
+    //   // 매개변수 이름으로 this 못 씀. 예약어 이므로.
+    //   console.log(t);
+    // }
+
+    // this 와 onclick 이용 시, 클릭된 요소 지우기를 쉽게 구현 가능.
+    function deleteThis(t) {
+      t.remove();
+    }
+
+    const listEl = document.querySelector(".list");
+    listEl.addEventListener("click", function (e) {
+      // 매개변수는 해당 브라우저의 이벤트 객체를 받아옴. 보통 e 라고 많이 씀.
+      // console.log(e.target);
+
+      // 클릭 시 지우기
+      e.target.remove();
+    });
+  </script>
+</html>

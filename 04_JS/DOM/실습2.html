@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>[실습]</title>
+
+    <style>
+      .orange {
+        background-color: orange;
+      }
+      .skyblue {
+        background-color: skyblue;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="box1" onclick="checkColor();">1</div>
+    <div class="box2">2</div>
+  </body>
+
+  <script>
+    // setAttribute() 말고 CSS 이용
+
+    // 요소들 다 받아 놓고 시작
+    const boxOne = document.querySelector(".box1");
+    const boxTwo = document.querySelector(".box2");
+
+    function checkColor() {
+      if (boxOne.classList.contains("orange")) {
+        boxOne.classList.remove("orange");
+        boxOne.classList.add("skyblue");
+      } else if (boxOne.classList.contains("skyblue")) {
+        boxOne.classList.remove("skyblue");
+        boxOne.classList.add("orange");
+      } else {
+        // 최초 클릭 시
+        boxOne.classList.add("orange");
+      }
+    }
+
+    // // 방법 1
+    // boxTwo.addEventListener("click", function () {
+    //   if (boxTwo.classList.contains("orange")) {
+    //     boxTwo.classList.remove("orange");
+    //     boxTwo.classList.add("skyblue");
+    //   } else if (boxTwo.classList.contains("skyblue")) {
+    //     boxTwo.classList.remove("skyblue");
+    //     boxTwo.classList.add("orange");
+    //   } else {
+    //     // 최초 클릭 시
+    //     boxTwo.classList.add("orange");
+    //   }
+    // });
+
+    // 방법 2 - 익명 함수 대신, 함수 만들어 함수 자체를 전달
+    function checkColor2() {
+      if (boxTwo.classList.contains("orange")) {
+        boxTwo.classList.remove("orange");
+        boxTwo.classList.add("skyblue");
+      } else if (boxTwo.classList.contains("skyblue")) {
+        boxTwo.classList.remove("skyblue");
+        boxTwo.classList.add("orange");
+      } else {
+        boxTwo.classList.add("orange");
+      }
+    }
+
+    boxTwo.addEventListener("click", checkColor2);
+  </script>
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>onclick</title>
+  </head>
+
+  <body>
+    <div class="box1" onclick="test()">1</div>
+    <div class="box2" onclick="changeColor()">2</div>
+    <div class="add">3</div>
+    <input type="text" />
+  </body>
+
+  <script>
+    // 함수 선언
+    function test() {
+      alert("클릭!");
+    }
+
+    function changeColor() {
+      const box2 = document.querySelector(".box2");
+      box2.setAttribute("style", "background-color: orange");
+    }
+
+    const addEventBox = document.querySelector(".add");
+    addEventBox.addEventListener("click", function () {
+      alert("이벤트 리스너 발동!");
+    });
+
+    const inputEl = document.querySelector("input");
+    // 둘이 동시에 쓰면, 무한 루프에 빠짐. 주의!!
+    inputEl.addEventListener("focus", function () {
+      alert("포커스 온!");
+    });
+    inputEl.addEventListener("blur", function () {
+      alert("포커스 아웃!");
+    });
+  </script>
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DOM</title>
+    <style>
+      .orange {
+        background-color: orange;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="box">box</div>
+    <div class="box">box2</div>
+    <!-- <div id="box2">box2</div> -->
+
+    <div class="box" id="third">box3</div>
+    <!-- 같은 경우, 처음 나온 것이 선택됨. but, id 는 1개 값만 쓰기에 이렇게 쓰지 말 것 -->
+    <!-- <div class="box" id="third">box4</div> -->
+
+    <ul>
+      <li>1</li>
+      <li>2</li>
+      <li>3</li>
+      <li>4</li>
+      <li>5</li>
+    </ul>
+
+    <script src="./querySelector.js"></script>
+    <!-- <script src="./classList.js"></script> -->
+  </body>
+</html>

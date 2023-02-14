@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>createElement</title>
+  </head>
+
+  <body>
+    <ul>
+      <li>1</li>
+      <li>2</li>
+    </ul>
+  </body>
+
+  <script>
+    // html 요소 만들기
+    // const box = document.createElement("div");
+    // console.log(box);
+
+    // const str = "<li>test</li>"; 보다 권장
+    const li = document.createElement("li");
+    li.textContent = "test";
+
+    // const btn = document.createElement("button");
+    // btn.textContent = "클릭!";(
+    // li.append(btn);
+
+    const checkBox = document.createElement("input");
+    checkBox.setAttribute("type", "checkbox");
+    li.appendChild(checkBox);
+
+    const firstLi = document.createElement("li");
+    const inputEl = document.createElement("input");
+    inputEl.setAttribute("type", "password");
+    firstLi.appendChild(inputEl);
+
+    const ulEl = document.querySelector("ul");
+    ulEl.append(li); // 위에 만들어 놓은 node 붙이기
+    // ulEl.appendChild(li); // 이렇게도 가능. appendChild 는 node 만 추가 가능.
+
+    ulEl.prepend(firstLi);
+  </script>
+</html>

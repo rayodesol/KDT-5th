@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>setAttribute</title>
+  </head>
+  <body>
+    <div class="box1">1</div>
+    <div class="box2">2</div>
+    <input type="text" />
+  </body>
+
+  <script>
+    // 일단 모든 변수 받는 작업부터 하기!
+    const boxOneEl = document.querySelector(".box1");
+    const boxTwoEl = document.querySelector(".box2");
+    const inputEl = document.querySelector("input");
+
+    // 문자열 내부에 "" 쓸 때, 1) "" 안에 '' / 2) 백틱
+    boxOneEl.innerHTML = "<a href='http://naver.com'>네이버로 이동</a>";
+    boxTwoEl.textContent = "박스 내용 및 스타일 변경";
+
+    // setAttribute 대신 이렇게도 가능
+    boxTwoEl.style = "background-color: orange";
+
+    inputEl.setAttribute("placeholder", "아이디를 입력하세요");
+  </script>
+</html>

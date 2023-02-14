@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Romove</title>
+  </head>
+
+  <body>
+    <ul>
+      <li>1</li>
+      <li class="list">2</li>
+      <li>3</li>
+      <li>4</li>
+    </ul>
+  </body>
+
+  <script>
+    const listEl = document.querySelector(".list");
+    // listEl.remove();
+
+    console.log(listEl.parentNode);
+
+    const ulEl = document.querySelector("ul");
+    console.log(ulEl.childNodes);
+    console.log(ulEl.children);
+  </script>
+</html>

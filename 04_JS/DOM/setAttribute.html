@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>setAttribute</title>
+  </head>
+  <body>
+    <div class="box">box</div>
+    <input type="text" />
+
+    <div class="div1">1</div>
+    <div class="div2">2</div>
+  </body>
+
+  <script>
+    const boxEl = document.querySelector(".box");
+    const inputEl = document.querySelector("input"); // 태그 선택자
+
+    boxEl.setAttribute("style", "background-color: orange");
+    // boxEl.setAttribute("style", "height: 300px"); // 속성 추가가 아니라, 통으로 교체.
+    // boxEl.setAttribute("style", "background-color: orange; height: 300px"); // 속성 여러개 주려면.
+    inputEl.setAttribute("placeholder", "통합검색");
+
+    // 내부 내용을 바꿀 때
+    console.log(boxEl.textContent);
+    boxEl.textContent = "KDT";
+
+    const divOneEl = document.querySelector(".div1");
+    const divTwoEl = document.querySelector(".div2");
+
+    divOneEl.innerHTML = "<button>test</button>"; // 태그로 들어감
+    divTwoEl.innerText = "<button>test</button>"; // 텍스트로 들어감
+  </script>
+</html>
