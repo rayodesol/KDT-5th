@@ -13,17 +13,18 @@ const todoList = document.querySelector(".todo-list"); // ul
 // const newTask = document.querySelector(".input-task").value;
 // console.log(newTask);
 
-/////// 추가 버튼 누를 때 // ing
+/////// ok //// 추가 버튼 누를 때
 addBtn.addEventListener("click", function () {
-  const newTask = document.querySelector(".input-task").value;
+  const newTask = document.querySelector(".input-task").value; // 입력 값 받아오기
   // console.log(newTask);
 
   if (newTask === "") {
+    // 입력내용 없을 때, placeholder
     inputTask.setAttribute("placeholder", "내용을 입력하세요!");
-    // console.log(typeof newTask);
-    // newTask.remove();
   } else {
     addList(newTask);
+    inputTask.value = "";
+    // console.log(todoList);
   }
 });
 
