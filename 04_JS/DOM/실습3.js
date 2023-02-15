@@ -35,6 +35,7 @@ function addList(content) {
 
   const checkBtn = document.createElement("input");
   checkBtn.setAttribute("type", "checkbox");
+  checkBtn.classList.add("task"); /////// 클래스명 추가
   li.prepend(checkBtn);
 
   const delBtn = document.createElement("button");
@@ -43,6 +44,12 @@ function addList(content) {
 
   todoList.append(li);
 }
+
+const doneList = document.querySelector(".task");
+
+doneList.addEventListener("click", function () {
+  console.log(doneList);
+});
 
 // /////// ok //// 리스트 1줄 만들기
 // const li = document.createElement("li");
