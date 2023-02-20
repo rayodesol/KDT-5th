@@ -1,0 +1,17 @@
+body {
+  background-color: orange;
+
+  // body 태그 안의 ul, ol 설정. nesting ; 하위 선택자 쓴 것과 같음.
+  ul,
+  ol {
+    list-style: none;
+  }
+
+  a {
+    text-decoration: none;
+  }
+
+  div {
+    box-sizing: border-box;
+  }
+}

@@ -1,0 +1,10 @@
+body {
+  background-color: orange;
+}
+body ul,
+body ol {
+  list-style: none;
+}
+body a {
+  text-decoration: none;
+}/*# sourceMappingURL=test2.css.map */

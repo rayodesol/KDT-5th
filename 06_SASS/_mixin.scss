@@ -1,0 +1,13 @@
+// () 없어도 작동 함. 매개변수로 색 설정 위해.
+// 매개변수 기본값 설정 가능.
+@mixin button($width: 100%, $bg-color: grey, $font-color: white) {
+  display: block;
+  width: $width;
+  height: 30px;
+  border-radius: 15px;
+  background-color: $bg-color;
+  color: $font-color;
+  text-align: center;
+  font: bold 16px/30px "arial";
+  margin-top: 20px;
+}

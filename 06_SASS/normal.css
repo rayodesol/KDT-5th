@@ -1,0 +1,64 @@
+/* RESET CSS */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+ul,
+ol {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+/* MAIN */
+body {
+  background-color: #eee;
+}
+
+.wrap {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  padding: 100px;
+  border: 2px solid #ddd;
+}
+
+.wrap .item {
+  width: 300px;
+  padding: 30px;
+  background-color: #fff;
+  margin: 50px;
+  border-radius: 10px;
+  box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.1);
+}
+
+.wrap .item h2 {
+  font: bold 30px/1 "arial";
+  margin-bottom: 20px;
+  color: #333;
+}
+
+.wrap .item p {
+  font: normal 16px/1.5 "arial";
+  color: #777;
+}
+
+.wrap .item a {
+  /* 인라인 요소 이므로 블록으로 변경 */
+  display: block;
+
+  width: 100px;
+  height: 30px;
+  border-radius: 15px;
+  background-color: #555;
+  color: white;
+  text-align: center;
+
+  /* 중앙정렬을 위해 line-height 30px */
+  font: bold 16px/30px "arial";
+  margin-top: 20px;
+}

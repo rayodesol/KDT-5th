@@ -1,0 +1,13 @@
+body {
+  background-color: orange;
+}
+body ul,
+body ol {
+  list-style: none;
+}
+body a {
+  text-decoration: none;
+}
+body div {
+  box-sizing: border-box;
+}/*# sourceMappingURL=test.css.map */

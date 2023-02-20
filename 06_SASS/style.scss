@@ -1,0 +1,144 @@
+// 다른 scss 파일 가져오기
+@import "reset";
+@import "mixin";
+
+// 변수 선언 $. 변수명 짓는 룰은 회사마다, 사람마다 다름.
+// 여기서 모든 색상 컨트롤 가능. 여기서 if문 사용도 가능.
+$body-bg: #eee;
+$wrap-border: #ddd;
+$wrap__item-bg: #fff;
+$wrap__item_h2: #333;
+$wrap__item_p: #777;
+$btn-bg: orange;
+$btn-font: white;
+$wrap__item-shadow: 5px 5px 20px rgba(0, 0, 0, 0.1);
+
+// JS 같은 한줄 주석 가능
+// Main
+body {
+  background-color: $body-bg;
+}
+
+.wrap {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  padding: 100px;
+  border: 2px solid $wrap-border;
+
+  // perspective 가 없다면 시점이 item 에게, 있다면 시점에 wrap 에게
+  perspective: 600px;
+
+  // wrap에 hover 걸기
+  &:hover {
+    // wrap 에 hover 일 때, item 에 효과
+    .item {
+      transform: translateY(0px) rotateY(0deg);
+      opacity: 1;
+    }
+  }
+
+  .item {
+    width: 300px;
+    padding: 30px;
+    background-color: $wrap__item-bg;
+    margin: 50px;
+    border-radius: 10px;
+    box-shadow: $wrap__item-shadow;
+    transform: translateY(100px) rotateY(180deg);
+    transition: 0.6s;
+    opacity: 0;
+
+    // // 정석 상 변수 선언은 맨 위에 하는 것이 좋음.
+    // $interval: 0.3s;
+    // @for $i from 1 to 5 {
+    //   &:nth-child(#{$i}) {
+    //     transition-delay: $interval * $i;
+    //   }
+    // }
+
+    // 아래 같은 효과를 위에 @for 로 처리 가능.
+    // &:nth-child(1) {
+    //   // 0 안 써도 됨 -> .1s
+    //   transition-delay: 0.1s;
+    // }
+
+    // &:nth-child(2) {
+    //   transition-delay: 0.2s;
+    // }
+
+    // &:nth-child(3) {
+    //   transition-delay: 0.3s;
+    // }
+
+    // &:nth-child(4) {
+    //   transition-delay: 0.4s;
+    // }
+
+    // & 은 자기 자신 -> .item
+    // &:hover {
+    //   background-color: orange;
+    // }
+
+    h2 {
+      font: bold 30px/1 "arial";
+      margin-bottom: 20px;
+
+      // === 는 안됨
+      @if $wrap__item-bg == #fff {
+        color: $wrap__item_h2;
+      } @else {
+        color: white;
+      }
+      // color: $wrap__item_h2;
+    }
+
+    p {
+      font: normal 16px/1.5 "arial";
+
+      @if $wrap__item-bg == #fff {
+        color: $wrap__item_p;
+      } @else {
+        color: white;
+      }
+      // color: $wrap__item_p;
+    }
+
+    $bgColors: (orange, hotpink, aqua, lightgreen);
+
+    // 위에 transition 효과 합치기
+    $interval: 0.3s;
+    // @each 로 버튼 색 각각 바꾸기
+    // $bgColors 의 원소가 차례대로 $el 에 들어오는 구조
+    @each $el in $bgColors {
+      $index: index(
+        $list: $bgColors,
+        $value: $el,
+      );
+      &:nth-child(#{$index}) {
+        transition-delay: $interval * $index;
+        a {
+          @include button($bg-color: $el);
+        }
+      }
+    }
+
+    // a {
+    //   display: block;
+    //   width: 100px;
+    //   height: 30px;
+    //   border-radius: 15px;
+    //   background-color: $btn-bg;
+    //   color: $btn-font;
+    //   text-align: center;
+    //   font: bold 16px/30px "arial";
+    //   margin-top: 20px;
+    // }
+
+    // // _mixin.scss 파일 불러오기
+    // // 협업 시, 헷갈리는 것을 방지해 매개변수 이름 명시.
+    // a {
+    //   @include button($width: 100%, $bg-color: $btn-bg, $font-color: $btn-font);
+    // }
+  }
+}
