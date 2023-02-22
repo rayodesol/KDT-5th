@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Keyframes</title>
+    <style>
+      div {
+        width: 100px;
+        height: 100px;
+
+        /* 원형 만들기 */
+        border-radius: 50%;
+
+        background-color: orange;
+      }
+
+      /* body 태그는 기본적으로 컨텐츠 높이 만큼의 높이를 가짐 */
+      /* 브라우저가 켜 있는 동안 무한히 애니메이션 반복 */
+      body div {
+        /* 애니메이션 이름 - 시간 - 딜레이 - 반복여부 - 타이밍함수 순서로 들어감 */
+        /* 속성명을 직접 쓰면서도 가능 */
+        animation: animation2 5s infinite linear;
+      }
+
+      @keyframes animation {
+        from {
+          transform: translate(0, 0);
+        }
+
+        /* 어디로 보낼지 */
+        to {
+          transform: translate(500px, 0);
+        }
+      }
+
+      @keyframes animation2 {
+        /* 구간별은 % 이용 */
+        0% {
+          transform: translate(0, 0);
+        }
+        25% {
+          transform: translate(500px, 0) rotateY(180deg);
+          opacity: 0.5;
+        }
+        50% {
+          transform: translate(500px, 500px) rotateY(0deg);
+        }
+        75% {
+          transform: translate(0, 500px) rotateX(180deg);
+        }
+        100% {
+          transform: translate(0, 0);
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <div></div>
+  </body>
+</html>

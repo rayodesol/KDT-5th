@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>LocalStorage</title>
+    <script>
+      window.localStorage.setItem("name", "송민선");
+      console.log(window.localStorage.getItem("name"));
+
+      window.localStorage.setItem("number", 1);
+      const number = window.localStorage.getItem("number");
+      console.log(number);
+      console.log(typeof number); // String 으로 나옴
+
+      const cielo = {
+        name: "송민선",
+        isOld: true,
+        hobby: ["산책", "넷플릭스", "자전거", "TV"],
+      };
+
+      // const jsonCielo = JSON.stringify(cielo);
+      // console.log(cielo);
+      // console.log(jsonCielo); // 문자열
+
+      // const objCielo = JSON.parse(jsonCielo);
+      // console.log(objCielo); // 객체로 변경
+
+      const jsonCielo = JSON.stringify(cielo);
+      window.localStorage.setItem("cielo", jsonCielo);
+
+      const jsonCieloFromLocal = window.localStorage.getItem("cielo");
+      const objCielo = JSON.parse(jsonCieloFromLocal);
+      console.log(objCielo);
+
+      console.log(window.localStorage);
+
+      // LocalStorage 에 특정 키 삭제하기
+      window.localStorage.setItem("pororo", "뽀로로입니다!");
+      console.log(window.localStorage.getItem("pororo"));
+      window.localStorage.removeItem("pororo");
+      console.log(window.localStorage.getItem("pororo"));
+
+      // LocalStorage 전체 삭제하기
+      window.localStorage.clear();
+      console.log(window.localStorage);
+
+      // LocalStorage 에 저장된 데이터 개수
+      window.localStorage.setItem("cielo", "접니다");
+      window.localStorage.setItem("pororo", "뽀로로");
+      console.log(window.localStorage.length);
+
+      // 저장된 키 이름 찾기
+      console.log(window.localStorage.key(0));
+      console.log(window.localStorage.key(1));
+      console.log(window.localStorage.key(2)); // 데이터가 없다면 null 출력
+
+      // SessionStorage
+      window.localStorage.clear();
+      window.localStorage.setItem("cielo", "송민선");
+      window.sessionStorage.setItem("pororo", "뽀로로");
+    </script>
+  </head>
+
+  <body></body>
+</html>

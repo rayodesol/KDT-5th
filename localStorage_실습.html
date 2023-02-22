@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>[실습] LocalStorage</title>
+    <script>
+      window.localStorage.clear();
+
+      window.localStorage.setItem("spring", "봄");
+      window.localStorage.setItem("summer", "여름");
+      window.localStorage.setItem("fall", "가을");
+      window.localStorage.setItem("winter", "겨울");
+      window.localStorage.setItem("oct", "10월");
+
+      for (let i = 0; i < window.localStorage.length; i++) {
+        const key = window.localStorage.key(i);
+        const value = window.localStorage.getItem(key);
+        console.log(`key는 ${key}, value는 ${value}`);
+      }
+    </script>
+  </head>
+
+  <body></body>
+</html>
